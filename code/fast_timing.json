@@ -1,0 +1,38 @@
+{
+ "total_synth_s": 246.164,
+ "n_items": 24,
+ "model_load_s": 13.0,
+ "seed": 0,
+ "overrides": {
+  "nfe_step": 12
+ },
+ "gpu": "Tesla T4",
+ "python": "3.13.15",
+ "items_file": "data/val_items.csv",
+ "per_item_s": {
+  "val_hi_01": 7.824,
+  "val_hi_02": 6.522,
+  "val_hi_03": 7.564,
+  "val_hi_04": 9.316,
+  "val_hi_05": 6.966,
+  "val_hi_06": 7.935,
+  "val_hg_01": 5.194,
+  "val_hg_02": 7.138,
+  "val_hg_03": 6.284,
+  "val_hg_04": 4.906,
+  "val_hg_05": 6.211,
+  "val_hg_06": 7.456,
+  "val_hd_01": 7.11,
+  "val_hd_02": 6.482,
+  "val_hd_03": 6.474,
+  "val_hd_04": 8.783,
+  "val_hd_05": 6.569,
+  "val_hd_06": 7.815,
+  "val_hd_07": 6.597,
+  "val_hd_08": 10.81,
+  "val_lg_01": 25.405,
+  "val_lg_02": 22.802,
+  "val_lg_03": 19.942,
+  "val_lg_04": 34.059
+ }
+}

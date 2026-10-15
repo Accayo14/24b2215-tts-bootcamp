@@ -12,23 +12,33 @@
     "val_cer_hard": 0.0989
   },
   "task3": {
-    "method_name": "",
+    "method_name": "Task 2 normalizer + rule-based English-to-Devanagari spelling (en2dev.py)",
     "targeted_failure": "english_word_error",
     "targeted_category": "hinglish",
     "builds_on_task2": true,
-    "settings": {},
-    "val_cer": null,
-    "val_sim": null,
-    "val_cer_targeted": null,
-    "val_control_cer": null
+    "settings": {
+      "decoding": "baseline unchanged (nfe_step 32, cfg_strength 2.0, sway -1.0, speed 1.0)",
+      "seed": 0,
+      "text": "Task 2 normalized text, then Latin-script words rewritten in Devanagari by code/en2dev.py"
+    },
+    "val_cer": 0.0582,
+    "val_sim": 0.84,
+    "val_cer_targeted": 0.0421,
+    "val_control_cer": 0.1231
   },
   "task4": {
-    "method_name": "",
-    "settings": {},
-    "val_cer": null,
-    "baseline_seconds": null,
-    "fast_seconds": null,
-    "speedup": null
+    "method_name": "Task 3 system with fewer flow-matching steps (nfe_step 12 instead of 32)",
+    "settings": {
+      "nfe_step": 12,
+      "other_decoding": "unchanged (cfg_strength 2.0, sway -1.0, speed 1.0)",
+      "seed": 0,
+      "text": "same text as Task 3 (code/en2dev.py output)",
+      "chosen_by": "code, on validation: fastest of nfe_step 16/12/8 with val CER <= 1.2 x 0.0582 (see code/t4_sweep.json)"
+    },
+    "val_cer": 0.0509,
+    "baseline_seconds": 613.092,
+    "fast_seconds": 246.164,
+    "speedup": 2.49
   },
   "_help": {
     "numbers": "All CER/SIM values are what metrics.py prints on the validation audio you submit. Leave null for tasks you skip.",
